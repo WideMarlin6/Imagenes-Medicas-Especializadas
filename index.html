@@ -4,29 +4,38 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Imagen Medicas Especializadas — Diagnósticos que marcan la diferencia contra el cáncer</title>
-  <meta name="description" content="Ultrasonido, Rayos X y estudios de imagen en Puebla. Diagnósticos que marcan la diferencia contra el cáncer. Agende por WhatsApp." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <!-- Tailwind Play CDN (no build needed) -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "MedicalClinic", "name": "Imagen Medicas Especializadas", "slogan": "Diagnósticos que marcan la diferencia contra el cáncer", "telephone": ["222 405 8190", "222 405 8195"], "email": "imagenesespecializadasdrmorale@gmail.com", "address": {"@type": "PostalAddress", "streetAddress": "Blvd. Héroes del 5 de Mayo 2889", "addressLocality": "Heroica Puebla de Zaragoza", "addressRegion": "Pue.", "postalCode": "72000", "addressCountry": "MX"}, "geo": {"@type": "GeoCoordinates", "latitude": 19.0560306, "longitude": -98.1933087}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "09:00", "closes": "19:00"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "14:00"}], "url": "https://example.com", "sameAs": [], "priceRange": "$$", "medicalSpecialty": ["Radiography", "Ultrasound"]}</script>
   <style>
     :root {
-      --pink: #f4a7b9;        /* pastel pink */
-      --pink-strong: #ee6c90; /* accent */
+      --pink: #f4a7b9;
+      --pink-strong: #ee6c90;
       --ink: #1f2937;
       --muted: #6b7280;
     }
-    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; }
+    body { font-family: Inter, sans-serif; }
     .btn-primary { background: var(--pink-strong); color: white; }
     .btn-outline { border: 1px solid var(--pink-strong); color: var(--pink-strong); }
     .badge { background: rgba(238,108,144,.1); color: var(--pink-strong); }
     .brand-dot { background: var(--pink-strong); }
+    .bg-soft-med {
+      position: relative;
+      background-image: url('https://images.unsplash.com/photo-1516549655169-df83a077451f?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+    .bg-soft-med::before{
+      content:'';
+      position:absolute;inset:0;
+      background: rgba(255,255,255,.75);
+      backdrop-filter: blur(2px);
+    }
+    .bg-soft-med > * { position: relative; }
   </style>
 </head>
 <body class="bg-white text-[var(--ink)]">
-  <!-- Navbar -->
   <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-3">
@@ -43,8 +52,7 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="bg-pink-50/60">
+  <section class="bg-soft-med">
     <div class="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-8 items-center">
       <div>
         <div class="inline-block px-3 py-1 rounded-full badge text-xs font-semibold">Estudios de imagen en Puebla</div>
@@ -52,165 +60,26 @@
           Imágenes nítidas, diagnósticos precisos.
           <span class="block text-[var(--pink-strong)]">Resultados el mismo día*</span>
         </h2>
-        <p class="mt-4 text-[var(--muted)]">Ultrasonido, Rayos X y estudios Doppler con atención cálida y precios honestos.</p>
+        <p class="mt-4 text-[var(--muted)]">Ultrasonido, Rayos X y Doppler con atención cálida y precios honestos.</p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href="https://wa.me/522223209984" target="_blank" class="px-5 py-3 rounded-2xl btn-primary text-base">Agendar por WhatsApp</a>
-          <a href="#precios" class="px-5 py-3 rounded-2xl btn-outline text-base">Ver precios</a>
+          <a href="#servicios" class="px-5 py-3 rounded-2xl btn-outline text-base">Ver servicios</a>
         </div>
         <p class="mt-3 text-xs text-[var(--muted)]">*Aplican estudios elegibles. Confirma tiempos al agendar.</p>
       </div>
-      <div class="aspect-video rounded-2xl bg-white grid place-items-center border">
-        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop" alt="Equipo de ultrasonido" class="h-full w-full object-cover rounded-2xl">
+      <div class="aspect-video rounded-2xl bg-white overflow-hidden border">
+        <img src="https://images.unsplash.com/photo-1578496481440-48ee9f1a83cc?q=80&w=1600&auto=format&fit=crop" alt="Equipo de ultrasonido" class="h-full w-full object-cover">
       </div>
     </div>
   </section>
 
-  <!-- Confianza -->
-  <section class="py-12">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-4">
-      <div class="p-5 rounded-2xl border bg-white">
-        <div class="text-sm font-semibold">Personal certificado</div>
-        <p class="text-sm text-[var(--muted)] mt-1">Médicos radiólogos y técnicos titulados.</p>
-      </div>
-      <div class="p-5 rounded-2xl border bg-white">
-        <div class="text-sm font-semibold">Resultados rápidos</div>
-        <p class="text-sm text-[var(--muted)] mt-1">Entrega digital y/o impresa el mismo día*.</p>
-      </div>
-      <div class="p-5 rounded-2xl border bg-white">
-        <div class="text-sm font-semibold">Interpretación médica</div>
-        <p class="text-sm text-[var(--muted)] mt-1">Informe claro para tu médico tratante.</p>
-      </div>
-      <div class="p-5 rounded-2xl border bg-white">
-        <div class="text-sm font-semibold">Atención humana</div>
-        <p class="text-sm text-[var(--muted)] mt-1">Citas puntuales y seguimiento por WhatsApp.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Servicios -->
-  <section id="servicios" class="py-6 border-y bg-white">
+  <section id="servicios" class="py-12 bg-white">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-3xl font-bold">Servicios</h2>
-      <p class="text-[var(--muted)] mt-1">Selecciona para agendar por WhatsApp.</p>
       <div class="grid md:grid-cols-3 gap-4 mt-6">
-        <a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido de Mama" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido de Mama</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido de Cuello o Tiroides" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido de Cuello o Tiroides</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido Pectoral" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido Pectoral</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido Inguinal" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido Inguinal</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido Obst\u00e9trico" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido Obstétrico</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido P\u00e9lvico" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido Pélvico</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido de Abdomen Completo" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido de Abdomen Completo</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido de Abdomen Superior" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido de Abdomen Superior</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido de H\u00edgado y V\u00edas Biliares" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido de Hígado y Vías Biliares</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido de H\u00edgado y V\u00edas Biliares con prueba de Boyden" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido de Hígado y Vías Biliares con prueba de Boyden</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido Renal" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido Renal</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido Hep\u00e1tico" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido Hepático</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido Prost\u00e1tico" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido Prostático</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido Prost\u00e1tico Transrectal" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido Prostático Transrectal</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido Endovaginal" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido Endovaginal</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido Testicular" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido Testicular</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido Doppler Renal" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido Doppler Renal</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido Doppler Hep\u00e1tico" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido Doppler Hepático</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido Doppler Carot\u00eddeo" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido Doppler Carotídeo</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Ultrasonido Doppler Venoso Miembros Inferiores" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Ultrasonido Doppler Venoso Miembros Inferiores</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a><a href="https://wa.me/522223209984?text=Hola,%20quiero%20agendar%20Rayos X" target="_blank" class="p-5 rounded-2xl border hover:shadow bg-white"><div class="font-semibold">Rayos X</div><div class="text-sm text-[var(--muted)] mt-1">Agendar por WhatsApp</div></a>
+        <div class="rounded-2xl border overflow-hidden"><img src="https://images.unsplash.com/photo-1578496481440-48ee9f1a83cc?q=80&w=1200&auto=format&fit=crop" alt="Ultrasonido de Mama" class="h-40 w-full object-cover"/><div class="p-4"><div class="font-semibold">Ultrasonido de Mama</div></div></div><div class="rounded-2xl border overflow-hidden"><img src="https://images.unsplash.com/photo-1580281657527-47e2c8b0fb3d?q=80&w=1200&auto=format&fit=crop" alt="Ultrasonido de Cuello o Tiroides" class="h-40 w-full object-cover"/><div class="p-4"><div class="font-semibold">Ultrasonido de Cuello o Tiroides</div></div></div><div class="rounded-2xl border overflow-hidden"><img src="https://images.unsplash.com/photo-1612538494520-9fc0c5a0d3f1?q=80&w=1200&auto=format&fit=crop" alt="Ultrasonido Obstétrico" class="h-40 w-full object-cover"/><div class="p-4"><div class="font-semibold">Ultrasonido Obstétrico</div></div></div><div class="rounded-2xl border overflow-hidden"><img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1200&auto=format&fit=crop" alt="Ultrasonido Pélvico" class="h-40 w-full object-cover"/><div class="p-4"><div class="font-semibold">Ultrasonido Pélvico</div></div></div><div class="rounded-2xl border overflow-hidden"><img src="https://images.unsplash.com/photo-1600959907703-125ba1374a12?q=80&w=1200&auto=format&fit=crop" alt="Ultrasonido de Abdomen Completo" class="h-40 w-full object-cover"/><div class="p-4"><div class="font-semibold">Ultrasonido de Abdomen Completo</div></div></div><div class="rounded-2xl border overflow-hidden"><img src="https://images.unsplash.com/photo-1623206813292-8bd9bfb87c1b?q=80&w=1200&auto=format&fit=crop" alt="Ultrasonido Doppler Carotídeo" class="h-40 w-full object-cover"/><div class="p-4"><div class="font-semibold">Ultrasonido Doppler Carotídeo</div></div></div><div class="rounded-2xl border overflow-hidden"><img src="https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=1200&auto=format&fit=crop" alt="Ultrasonido Doppler Venoso Miembros Inferiores" class="h-40 w-full object-cover"/><div class="p-4"><div class="font-semibold">Ultrasonido Doppler Venoso Miembros Inferiores</div></div></div><div class="rounded-2xl border overflow-hidden"><img src="https://images.unsplash.com/photo-1530210124550-912dc1381cb8?q=80&w=1200&auto=format&fit=crop" alt="Rayos X" class="h-40 w-full object-cover"/><div class="p-4"><div class="font-semibold">Rayos X</div></div></div>
       </div>
     </div>
   </section>
-
-  <!-- Precios (placeholder) -->
-  <section id="precios" class="py-12">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold">Precios transparentes</h2>
-      <p class="text-[var(--muted)] mt-1">Podemos mostrar precios "desde" o paquetes. Dime si quieres que publique costos ahora o por cotización.</p>
-      <div class="grid md:grid-cols-3 gap-4 mt-6">
-        <div class="p-6 rounded-2xl border-2">
-          <div class="text-lg font-semibold">Ultrasonido</div>
-          <div class="text-3xl font-extrabold mt-1">$—</div>
-          <ul class="list-disc pl-5 text-sm text-[var(--muted)] mt-3">
-            <li>Abdomen / Partes blandas</li>
-            <li>Obstétrico / Pélvico</li>
-            <li>Doppler (varios)</li>
-          </ul>
-          <a class="w-full mt-4 inline-block text-center px-4 py-2 rounded-xl btn-primary" href="https://wa.me/522223209984?text=Hola,%20quiero%20cotizar%20Ultrasonido" target="_blank">Cotizar por Whats</a>
-        </div>
-        <div class="p-6 rounded-2xl border-2">
-          <div class="text-lg font-semibold">Rayos X</div>
-          <div class="text-3xl font-extrabold mt-1">$—</div>
-          <ul class="list-disc pl-5 text-sm text-[var(--muted)] mt-3">
-            <li>Tórax PA/Lateral</li>
-            <li>Extremidades</li>
-            <li>Columna</li>
-          </ul>
-          <a class="w-full mt-4 inline-block text-center px-4 py-2 rounded-xl btn-primary" href="https://wa.me/522223209984?text=Hola,%20quiero%20cotizar%20Rayos%20X" target="_blank">Cotizar por Whats</a>
-        </div>
-        <div class="p-6 rounded-2xl border-2">
-          <div class="text-lg font-semibold">Doppler</div>
-          <div class="text-3xl font-extrabold mt-1">$—</div>
-          <ul class="list-disc pl-5 text-sm text-[var(--muted)] mt-3">
-            <li>Renal / Hepático</li>
-            <li>Carotídeo</li>
-            <li>Venoso MI</li>
-          </ul>
-          <a class="w-full mt-4 inline-block text-center px-4 py-2 rounded-xl btn-primary" href="https://wa.me/522223209984?text=Hola,%20quiero%20cotizar%20Doppler" target="_blank">Cotizar por Whats</a>
-        </div>
-      </div>
-      <p class="text-xs text-[var(--muted)] mt-3">*Contraste en TC sujeto a indicación médica y valoración previa.</p>
-    </div>
-  </section>
-
-  <!-- Indicaciones -->
-  <section id="indicaciones" class="py-12 border-y bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold">Indicaciones y preparación</h2>
-      <div class="grid md:grid-cols-3 gap-4 mt-6">
-        <div class="p-5 rounded-2xl border bg-white">
-          <div class="font-semibold">Ultrasonido abdomen</div>
-          <ul class="list-disc pl-5 text-sm text-[var(--muted)] mt-2">
-            <li>Ayuno 6–8 horas</li>
-            <li>Hidratarse bien</li>
-            <li>Traer orden médica si se cuenta con ella</li>
-          </ul>
-        </div>
-        <div class="p-5 rounded-2xl border bg-white">
-          <div class="font-semibold">Rayos X tórax</div>
-          <ul class="list-disc pl-5 text-sm text-[var(--muted)] mt-2">
-            <li>Ropa sin metal</li>
-            <li>Retirar cadenas y aretes</li>
-            <li>Evitar cremas densas</li>
-          </ul>
-        </div>
-        <div class="p-5 rounded-2xl border bg-white">
-          <div class="font-semibold">Doppler</div>
-          <ul class="list-disc pl-5 text-sm text-[var(--muted)] mt-2">
-            <li>Traer estudios previos</li>
-            <li>Valorar alergias a contraste (si aplica)</li>
-            <li>Firmar consentimiento informado</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contacto + Mapa -->
-  <section id="contacto" class="py-12">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-start">
-      <div>
-        <h2 class="text-3xl font-bold">Contáctanos</h2>
-        <div class="mt-4 space-y-2 text-[var(--ink)]">
-          <p><strong>WhatsApp:</strong> <a href="https://wa.me/522223209984" target="_blank" class="underline">+52 222 320 9984</a></p>
-          <p><strong>Teléfonos:</strong> 222 405 8190 / 222 405 8195</p>
-          <p><strong>Email:</strong> <a href="mailto:imagenesespecializadasdrmorale@gmail.com" class="underline">imagenesespecializadasdrmorale@gmail.com</a></p>
-          <p><strong>Dirección:</strong> Blvd. Héroes del 5 de Mayo 2889, Barrio de San Antonio, 72000 Heroica Puebla de Zaragoza, Pue.</p>
-          <p><strong>Horario:</strong> Lunes a Viernes: 9:00–19:00 · Sábados: 9:00–14:00 · Domingos: Cerrado</p>
-        </div>
-      </div>
-      <div class="rounded-2xl overflow-hidden border aspect-video bg-gray-100">
-        <iframe src="https://www.google.com/maps?q=Blvd.+H%C3%A9roes+del++5+de+Mayo+2889,+Barrio+de+San+Antonio,+72000+Heroica+Puebla+de+Zaragoza,+Pue.&output=embed" width="100%" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-10 border-t bg-white">
-    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-      <div>
-        <p class="font-semibold">Imagen Medicas Especializadas</p>
-        <p class="text-sm text-[var(--muted)]">Diagnósticos que marcan la diferencia contra el cáncer</p>
-        <p class="text-xs text-[var(--muted)] mt-2">Aviso: Este sitio no sustituye la valoración médica. En emergencias llama al 911.</p>
-      </div>
-      <div class="grid grid-cols-2 gap-3 text-sm">
-        <a href="#servicios" class="underline">Servicios</a>
-        <a href="#precios" class="underline">Precios</a>
-        <a href="#indicaciones" class="underline">Indicaciones</a>
-        <a href="#contacto" class="underline">Contacto</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Botón flotante WhatsApp -->
-  <a href="https://wa.me/522223209984" target="_blank" class="fixed bottom-5 right-5 rounded-full shadow-lg p-4" style="background: var(--pink-strong)" aria-label="WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="white" viewBox="0 0 24 24"><path d="M20.52 3.48A11.87 11.87 0 0012.05 0C5.53 0 .19 5.34.19 11.92c0 2.1.55 4.05 1.52 5.77L0 24l6.5-1.68a11.86 11.86 0 005.55 1.41h.01c6.52 0 11.86-5.34 11.86-11.92 0-3.18-1.24-6.17-3.39-8.33zM12.06 21.4h-.01a9.4 9.4 0 01-4.79-1.3l-.34-.2-3.86 1 1.03-3.76-.22-.35a9.43 9.43 0 01-1.44-4.98c0-5.2 4.23-9.43 9.43-9.43 2.52 0 4.89.98 6.67 2.77a9.36 9.36 0 012.77 6.66c0 5.2-4.23 9.43-9.44 9.43zm5.18-7.88c-.28-.14-1.64-.8-1.9-.88-.26-.1-.45-.14-.64.13-.2.27-.74.88-.9 1.06-.17.19-.33.2-.61.07-.28-.13-1.18-.43-2.25-1.38-.83-.74-1.4-1.66-1.57-1.94-.16-.27-.02-.42.12-.55.12-.12.27-.31.4-.47.13-.16.17-.27.26-.45.08-.19.04-.34-.02-.48-.06-.14-.64-1.55-.87-2.12-.23-.55-.46-.48-.64-.48h-.55c-.19 0-.48.07-.73.34-.25.27-.96.94-.96 2.3 0 1.35.98 2.66 1.12 2.84.13.17 1.93 2.95 4.7 4.08.66.28 1.18.45 1.58.58.66.21 1.26.18 1.74.11.53-.08 1.64-.67 1.87-1.31.23-.64.23-1.2.16-1.31-.06-.11-.25-.18-.53-.31z"/></svg>
-  </a>
 </body>
 </html>
